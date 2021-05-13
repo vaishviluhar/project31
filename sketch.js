@@ -1,7 +1,8 @@
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
-const Constraint = Matter.Constraint;
+
+var engine, world;
 
 var particles, plinko, divisions, ground;
 var particles = [];
@@ -11,6 +12,8 @@ var divisionHeight = 300;
 
 function setup() {
   createCanvas(480,800);
+  engine = Engine.create();
+  world = engine.world;
   
   ground = new Ground(240, 790, 480, 20);
 
@@ -18,6 +21,7 @@ function setup() {
 }
 
 function draw() {
+  Engine.update(engine);
   background(255,255,255); 
   
   ground.display();
