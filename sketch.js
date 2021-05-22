@@ -18,6 +18,8 @@ function setup() {
   ground = new Ground(240, 790, 480, 20);
 
   plinko = new Plinko(240, 400, 10);
+
+  divisions = new Division(1, 200, 10, 400);
 }
 
 function draw() {
@@ -25,6 +27,8 @@ function draw() {
   background(255,255,255); 
   
   ground.display();
+  plinko.display();
+  divisions.display();
 
   for (var j = 40; j <= width; j=j + 50){
     plinkos.push(new Plinko(j, 75));
