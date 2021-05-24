@@ -19,7 +19,7 @@ function setup() {
 
   plinko = new Plinko(240, 400, 10);
 
-  divisions = new Division(1, 200, 10, 400);
+  divisions = new Division(1, 580, 10, 400);
 }
 
 function draw() {
